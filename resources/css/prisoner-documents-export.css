@@ -1,0 +1,104 @@
+@import './crime-type-report.css';
+
+.prisoner-documents-export-body {
+    margin: 0;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+.prisoner-documents-export {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.prisoner-documents-export-page {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.prisoner-documents-export-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.prisoner-documents-export-header h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.prisoner-documents-export-header p {
+    margin: 0.25rem 0 0;
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+.prisoner-documents-export-page-label {
+    align-self: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.prisoner-documents-export-image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    background: #fff;
+}
+
+.prisoner-documents-export-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+}
+
+.prisoner-documents-export-empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #64748b;
+}
+
+@media print {
+    .crime-report-toolbar {
+        display: none !important;
+    }
+
+    .prisoner-documents-export {
+        max-width: none;
+        padding: 0;
+    }
+
+    .prisoner-documents-export-page {
+        break-after: page;
+        page-break-after: always;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+
+    .prisoner-documents-export-page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    .prisoner-documents-export-image {
+        max-height: none;
+        width: 100%;
+    }
+}

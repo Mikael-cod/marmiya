@@ -1,0 +1,173 @@
+@import './crime-type-report.css';
+
+.sentence-type-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.sentence-type-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .sentence-type-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.sentence-type-report-heading {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.sentence-type-form-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.sentence-type-report-title {
+    margin: 0;
+    padding-top: 0.15rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .sentence-type-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.sentence-type-report-table-scroll {
+    position: relative;
+}
+
+.sentence-type-report-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.sentence-type-report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: #0f172a;
+    border: 2px solid #1e293b;
+}
+
+@media (min-width: 640px) {
+    .sentence-type-report-table {
+        font-size: 0.88rem;
+    }
+}
+
+.sentence-type-report-table th,
+.sentence-type-report-table td {
+    border: 1px solid #334155;
+    padding: 0.45rem 0.55rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sentence-type-report-table thead th {
+    background: #e2e8f0;
+    font-weight: 700;
+}
+
+.sentence-type-report-table tbody td {
+    background: #fff;
+}
+
+.st-col-no {
+    width: 3.5rem;
+}
+
+.st-col-type {
+    min-width: 9rem;
+    text-align: start !important;
+}
+
+.st-col-remark {
+    min-width: 6rem;
+}
+
+.st-cell-no {
+    font-weight: 600;
+}
+
+.st-cell-type {
+    text-align: start !important;
+    font-weight: 500;
+}
+
+.st-cell-remark {
+    min-height: 1.75rem;
+}
+
+.st-group-head {
+    background: #cbd5e1 !important;
+}
+
+.st-total-row td {
+    background: #fef9c3 !important;
+    border-top: 2px solid #ca8a04;
+    font-weight: 700;
+}
+
+.st-cell-total-label {
+    text-align: start !important;
+    color: #92400e;
+}
+
+.sentence-type-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.sentence-type-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.sentence-type-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .sentence-type-report-table-wrap {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .sentence-type-report-table {
+        font-size: 10pt;
+    }
+
+    .sentence-type-signatures {
+        break-inside: avoid;
+    }
+}

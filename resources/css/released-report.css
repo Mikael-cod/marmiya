@@ -1,0 +1,187 @@
+@import './crime-type-report.css';
+
+.released-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.released-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .released-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.released-report-heading {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.released-form-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.released-report-title {
+    margin: 0;
+    padding-top: 0.15rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .released-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.released-report-table-scroll {
+    position: relative;
+}
+
+.released-report-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.released-report-table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+    line-height: 1.3;
+    color: #0f172a;
+    border: 2px solid #1e293b;
+}
+
+@media (min-width: 640px) {
+    .released-report-table {
+        font-size: 0.78rem;
+    }
+}
+
+.released-report-table th,
+.released-report-table td {
+    border: 1px solid #334155;
+    padding: 0.35rem 0.4rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.released-report-table thead th {
+    background: #e2e8f0;
+    font-weight: 700;
+}
+
+.released-report-table tbody td {
+    background: #fff;
+}
+
+.rel-col-no {
+    width: 2.75rem;
+}
+
+.rel-col-facility {
+    min-width: 7rem;
+    text-align: start !important;
+}
+
+.rel-col-nationality {
+    min-width: 4.5rem;
+}
+
+.rel-cell-facility {
+    text-align: start !important;
+    font-weight: 600;
+}
+
+.rel-cell-nationality {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rel-group-head {
+    background: #cbd5e1 !important;
+    font-size: 0.68rem;
+}
+
+.rel-group-total {
+    background: #fde68a !important;
+}
+
+.rel-section-start {
+    border-inline-start: 2px solid #64748b;
+}
+
+.rel-total-row td,
+.rel-grand-row td {
+    background: #fef9c3 !important;
+    border-top: 2px solid #ca8a04;
+    font-weight: 700;
+}
+
+.rel-grand-row td {
+    background: #fde68a !important;
+}
+
+.rel-cell-total-label {
+    text-align: start !important;
+    color: #92400e;
+}
+
+.released-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.released-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.released-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .released-report-table-wrap {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .released-report-table {
+        width: 100%;
+        min-width: 0;
+        font-size: 6pt;
+    }
+
+    .released-signatures {
+        break-inside: avoid;
+    }
+}

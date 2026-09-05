@@ -1,0 +1,88 @@
+@import './crime-type-report.css';
+
+.new-intake-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.new-intake-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .new-intake-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.new-intake-report-heading {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.new-intake-form-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.new-intake-report-title {
+    margin: 0;
+    padding-top: 0.15rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .new-intake-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.ni-banner-head {
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: #dbeafe !important;
+    color: #1e3a8a;
+}
+
+.ni-col-institution,
+.ni-cell-institution {
+    min-width: 8.5rem;
+    text-align: start !important;
+    font-weight: 600;
+}
+
+.new-intake-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.new-intake-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.new-intake-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .new-intake-signatures {
+        break-inside: avoid;
+    }
+}

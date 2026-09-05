@@ -1,0 +1,182 @@
+@import './crime-type-report.css';
+
+.cwm-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.cwm-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .cwm-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.cwm-report-title {
+    margin: 0 0 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .cwm-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.cwm-report-table-scroll {
+    position: relative;
+}
+
+.cwm-report-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.cwm-report-table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: #0f172a;
+    border: 2px solid #1e293b;
+}
+
+@media (min-width: 640px) {
+    .cwm-report-table {
+        font-size: 0.78rem;
+    }
+}
+
+.cwm-report-table th,
+.cwm-report-table td {
+    border: 1px solid #334155;
+    padding: 0.35rem 0.45rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cwm-report-table thead th {
+    background: #e2e8f0;
+    font-weight: 700;
+}
+
+.cwm-report-table tbody td {
+    background: #fff;
+}
+
+.cwm-col-no {
+    width: 2.75rem;
+}
+
+.cwm-col-child-name,
+.cwm-col-mother-name {
+    min-width: 8.5rem;
+    text-align: start !important;
+}
+
+.cwm-col-gender,
+.cwm-col-age {
+    width: 2.75rem;
+}
+
+.cwm-col-mother-crime {
+    min-width: 8rem;
+    text-align: start !important;
+}
+
+.cwm-col-mother-sentence {
+    min-width: 7rem;
+}
+
+.cwm-col-remark {
+    min-width: 5rem;
+    text-align: start !important;
+}
+
+.cwm-cell-child-name,
+.cwm-cell-mother-name,
+.cwm-cell-mother-crime,
+.cwm-cell-mother-sentence,
+.cwm-cell-remark {
+    text-align: start !important;
+}
+
+.cwm-group-head {
+    background: #cbd5e1 !important;
+}
+
+.cwm-date-part {
+    min-width: 2.25rem;
+}
+
+.cwm-empty-row {
+    padding: 1.5rem !important;
+    color: #64748b;
+    font-style: italic;
+}
+
+.cwm-total-row td {
+    background: #fef9c3 !important;
+    border-top: 2px solid #ca8a04;
+    font-weight: 700;
+    text-align: start !important;
+}
+
+.cwm-cell-total-label {
+    color: #92400e;
+}
+
+.cwm-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.cwm-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.cwm-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .cwm-report-table-wrap {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .cwm-report-table {
+        width: 100%;
+        min-width: 0;
+        font-size: 7pt;
+    }
+
+    .cwm-signatures {
+        break-inside: avoid;
+    }
+}

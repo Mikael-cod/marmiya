@@ -1,0 +1,194 @@
+@import './crime-type-report.css';
+
+.ds-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.ds-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .ds-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.ds-report-title {
+    margin: 0 0 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .ds-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.ds-report-table-scroll {
+    position: relative;
+}
+
+.ds-report-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.ds-report-table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    color: #0f172a;
+    border: 2px solid #1e293b;
+}
+
+@media (min-width: 640px) {
+    .ds-report-table {
+        font-size: 0.74rem;
+    }
+}
+
+.ds-report-table th,
+.ds-report-table td {
+    border: 1px solid #334155;
+    padding: 0.35rem 0.4rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ds-report-table thead th {
+    background: #e2e8f0;
+    font-weight: 700;
+}
+
+.ds-report-table tbody td {
+    background: #fff;
+}
+
+.ds-col-no {
+    width: 2.5rem;
+}
+
+.ds-col-name {
+    min-width: 8.5rem;
+    text-align: start !important;
+}
+
+.ds-col-gender,
+.ds-col-age {
+    width: 2.5rem;
+}
+
+.ds-col-nationality {
+    width: 3rem;
+}
+
+.ds-col-crime,
+.ds-col-court {
+    min-width: 7.5rem;
+    text-align: start !important;
+}
+
+.ds-col-file {
+    min-width: 4.5rem;
+}
+
+.ds-col-sentence {
+    min-width: 3.5rem;
+}
+
+.ds-col-station,
+.ds-col-death {
+    width: 3rem;
+}
+
+.ds-col-total {
+    min-width: 7rem;
+    text-align: start !important;
+}
+
+.ds-cell-name,
+.ds-cell-crime,
+.ds-cell-court,
+.ds-cell-total {
+    text-align: start !important;
+}
+
+.ds-group-head {
+    background: #cbd5e1 !important;
+}
+
+.ds-date-part {
+    min-width: 2rem;
+}
+
+.ds-empty-row {
+    padding: 1.5rem !important;
+    color: #64748b;
+    font-style: italic;
+}
+
+.ds-total-row td {
+    background: #fef9c3 !important;
+    border-top: 2px solid #ca8a04;
+    font-weight: 700;
+    text-align: start !important;
+}
+
+.ds-cell-total-label {
+    color: #92400e;
+}
+
+.ds-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.ds-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.ds-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .ds-report-table-wrap {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .ds-report-table {
+        width: 100%;
+        min-width: 0;
+        font-size: 6.5pt;
+    }
+
+    .ds-signatures {
+        break-inside: avoid;
+    }
+}

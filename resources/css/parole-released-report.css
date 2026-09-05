@@ -1,0 +1,185 @@
+@import './crime-type-report.css';
+
+.parole-released-report-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.parole-released-report-sheet {
+    background: #fff;
+    padding: 1.5rem 1rem 1.75rem;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .parole-released-report-sheet {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.parole-released-report-title {
+    margin: 0 0 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+@media (min-width: 640px) {
+    .parole-released-report-title {
+        font-size: 1.05rem;
+    }
+}
+
+.parole-released-report-table-scroll {
+    position: relative;
+}
+
+.parole-released-report-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.parole-released-report-table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    color: #0f172a;
+    border: 2px solid #1e293b;
+}
+
+@media (min-width: 640px) {
+    .parole-released-report-table {
+        font-size: 0.74rem;
+    }
+}
+
+.parole-released-report-table th,
+.parole-released-report-table td {
+    border: 1px solid #334155;
+    padding: 0.3rem 0.35rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.parole-released-report-table thead th {
+    background: #e2e8f0;
+    font-weight: 700;
+}
+
+.parole-released-report-table tbody td {
+    background: #fff;
+}
+
+.pr-col-no {
+    width: 2.5rem;
+}
+
+.pr-col-inst-file,
+.pr-col-court-file {
+    min-width: 4.5rem;
+}
+
+.pr-col-name {
+    min-width: 8.5rem;
+    text-align: start !important;
+}
+
+.pr-col-gender {
+    width: 2.25rem;
+}
+
+.pr-col-crime,
+.pr-col-court {
+    min-width: 7rem;
+    text-align: start !important;
+}
+
+.pr-col-sentence {
+    min-width: 6rem;
+}
+
+.pr-col-institution {
+    min-width: 4rem;
+}
+
+.pr-cell-name,
+.pr-cell-crime,
+.pr-cell-court,
+.pr-cell-sentence {
+    text-align: start !important;
+}
+
+.pr-group-head {
+    background: #cbd5e1 !important;
+    font-size: 0.64rem;
+}
+
+.pr-date-part {
+    min-width: 2rem;
+}
+
+.pr-empty-row {
+    padding: 1.5rem !important;
+    color: #64748b;
+    font-style: italic;
+}
+
+.pr-total-row td {
+    background: #fef9c3 !important;
+    border-top: 2px solid #ca8a04;
+    font-weight: 700;
+    text-align: start !important;
+}
+
+.pr-cell-total-label {
+    color: #92400e;
+}
+
+.parole-released-signatures {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.parole-released-signature-label {
+    margin: 0 0 2.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.parole-released-signature-line {
+    border-bottom: 1px dotted #64748b;
+    min-height: 1px;
+}
+
+@media print {
+    .parole-released-report-table-wrap {
+        overflow: visible;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .parole-released-report-table {
+        width: 100%;
+        min-width: 0;
+        font-size: 6pt;
+    }
+
+    .parole-released-signatures {
+        break-inside: avoid;
+    }
+}
