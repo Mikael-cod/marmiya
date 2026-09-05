@@ -2,6 +2,10 @@
 
 Amharic-first Laravel application for inmate intake, assets, expenses, prisoner files, reports, and admin operations.
 
+**Production:** https://marmiya.makalla.org
+
+Full deployment guide: [deploy/DEPLOY.md](deploy/DEPLOY.md)
+
 ## Requirements
 
 - PHP 8.3+
@@ -56,13 +60,15 @@ git push -u origin main
 
 ### Deploy secrets (Repository → Settings → Secrets)
 
+Target: **marmiya.makalla.org** on makalla.org (LiteSpeed/cPanel)
+
 | Secret | Example | Description |
 |--------|---------|-------------|
-| `SSH_PRIVATE_KEY` | `-----BEGIN OPENSSH PRIVATE KEY-----...` | Deploy key for the server |
-| `SSH_HOST` | `203.0.113.10` | Server IP or hostname |
-| `SSH_USER` | `deploy` | SSH user |
-| `SSH_PORT` | `22` | SSH port (optional, default 22) |
-| `DEPLOY_PATH` | `/var/www/maremiya` | App root on the server |
+| `SSH_PRIVATE_KEY` | deploy key private half | GitHub Actions → server SSH |
+| `SSH_HOST` | `makalla.org` | Server hostname |
+| `SSH_USER` | cPanel username | SSH user |
+| `SSH_PORT` | `22` | SSH port |
+| `DEPLOY_PATH` | `/home/USER/marmiya.makalla.org` | App root on server |
 
 ### Server preparation (one time)
 
@@ -79,12 +85,12 @@ php artisan storage:link
 chmod -R ug+rwx storage bootstrap/cache
 ```
 
-Production `.env` minimum:
+Production `.env` minimum (see `deploy/env.production.example`):
 
 ```
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://your-domain.et
+APP_URL=https://marmiya.makalla.org
 LOG_LEVEL=error
 DB_CONNECTION=mysql
 SESSION_SECURE_COOKIE=true

@@ -61,6 +61,10 @@ class AppServiceProvider extends ServiceProvider
                 'session.lifetime' => (int) $settings->get('session_lifetime_minutes', 120),
                 'session.expire_on_close' => (bool) $settings->get('expire_session_on_close', false),
             ]);
+
+            if ($settings->get('force_https', false) || config('app.env') === 'production') {
+                config(['session.secure' => true]);
+            }
         } catch (\Throwable) {
             //
         }
